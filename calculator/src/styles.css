@@ -1,0 +1,66 @@
+/*styles.css*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+h1{
+
+  color: yellow;
+
+}
+
+  body {
+    margin: 0;
+    background-image: url('C:\Users\Kalim Khan\Documents\calculator\calculator\calculator\src\maths.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .calculator-grid {
+    display: grid;
+    margin-top: 2rem;
+    justify-content: center;
+    grid-template-columns: repeat(4, 7rem);
+    grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+  }
+  
+  .calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 3px solid black;
+    outline: none;
+    background-color: rgba(254, 254, 254, .74);
+  }
+  
+  .calculator-grid > button:hover,
+  .calculator-grid > button:focus {
+    background-image: radial-gradient(circle, #ff0000, #0000ff);
+  }
+  
+  .span-two {
+    grid-column: span 2;
+  }
+  
+  .output {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .25);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: .75rem;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+  
+  .output .previous-operand {
+    color: rgba(68, 255, 255, .75);
+    font-size: 1.7rem;
+  }
+  
+  .output .current-operand {
+    color: cyan;
+    font-size: 2.8rem;
+  }
